@@ -6,13 +6,34 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.soong.mapper.BoardMapper">
  
     <insert id="boardInsert" parameterType="com.soong.vo.BoardVO">
-        insert into BOARD
-            values
-        (#{board_srl},#{title},#{contents},#{reg_id},now(),0)
+        INSERT INTO BOARD VALUES (
+        	#{board_srl},
+        	#{title},
+        	#{contents},
+        	#{reg_id},
+        	now(),
+        	0
+        )
     </insert>
     
     <select id="boardList" resultType="com.soong.vo.BoardVO">
-        select * from BOARD
+        SELECT * FROM BOARD
     </select>
- 
+    
+    <select id="boardView" parameterType="int" resultType="com.soong.vo.BoardVO">
+        SELECT * FROM BOARD WHERE board_srl = #{board_srl}
+    </select>
+    
+    <update id="hitPlus" parameterType="int">
+        UPDATE BOARD SET hit = hit+1 WHERE board_srl = #{board_srl}
+    </update>
+    
+    <update id="boardUpdate" parameterType="com.soong.vo.BoardVO">
+        UPDATE BOARD SET title = #{title}, contents = #{contents} WHERE board_srl = #{board_srl}
+    </update>
+    
+    <delete id="boardDelete" parameterType="int">
+        DELETE FROM BOARD WHERE board_srl = #{board_srl}
+    </delete>
+
 </mapper>
