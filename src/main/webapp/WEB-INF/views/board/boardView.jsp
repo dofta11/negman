@@ -35,9 +35,11 @@
       </div>
       <div class="">
           <input type="button" value="수정" onclick='location.href="/board/boardWrite/${board.board_srl}"'>
+          
           <form:form action="/board/boardWrite/${board.board_srl}" method="DELETE">
               <input type="submit" value="삭제">
           </form:form>
+          
       </div>
     </div>
 </body>
