@@ -1,15 +1,10 @@
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>게시글 작성</title>
-</head>
-<body>
+<div id="contents">
 	<h3>게시글 작성</h3>
 	<div style="padding: 30px;">
 		<form method="POST" action="/board/boardWrite">
@@ -26,5 +21,4 @@
 			<button type="submit" class="">작성</button>
 		</form>
 	</div>
-</body>
-</html>
+</div>

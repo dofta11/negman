@@ -4,7 +4,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 
 import com.soong.mapper.BoardMapper;
 import com.soong.vo.BoardVO;
@@ -29,6 +31,15 @@ public class NegmanApplicationTests {
 		
 		mapper.boardInsert(vo);
 
+	}
+	
+	@Bean
+	public void testTilesConfigurer() {
+		TilesConfigurer configurer = new TilesConfigurer();
+		configurer.setDefinitions(new String[] { "file:src/main/webapp/WEB-INF/tiles/tiles.xml" });
+		configurer.setCheckRefresh(true);
+		
+		System.out.println(configurer);
 	}
 	
 //	@Autowired

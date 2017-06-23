@@ -1,13 +1,14 @@
 package com.soong.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class MainController {
 	
-	@RequestMapping("/main")
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public ModelAndView main(){
 		ModelAndView mav = new ModelAndView();
 		
@@ -15,11 +16,11 @@ public class MainController {
 		return mav;
 	}
 	
-	@RequestMapping("/main2")
-	public ModelAndView main2(){
+	@RequestMapping("/helloworld")
+	public ModelAndView helloworld(){
 		ModelAndView mav = new ModelAndView();
 		
-		mav.setViewName("redirect:/main");
+		mav.setViewName("main/helloworld");
 		return mav;
 	}
 }

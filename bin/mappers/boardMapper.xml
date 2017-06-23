@@ -6,8 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.soong.mapper.BoardMapper">
  
     <insert id="boardInsert" parameterType="com.soong.vo.BoardVO">
-        INSERT INTO BOARD VALUES (
-        	#{board_srl},
+        INSERT INTO BOARD (title, contents, reg_id, reg_dt, hit) VALUES (
         	#{title},
         	#{contents},
         	#{reg_id},
