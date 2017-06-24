@@ -21,7 +21,15 @@ public class MainController {
 	
 	//이걸 툴로하는걸 보여줄게.  지금한게 소스받은거야..  지금 소스가 최신상태라 다운받을게 없다는거.
 	
+	//이게 커밋창이야.    이 커밋창에서  1,2단계 다할수있음  Add와 커밋.
+	// Add는 뭐냐면.  이게 원래상태야.   unstaged Changes 에 파일이있을거야 너가 수정한파일.
+	// 저거를 아래로 댕기는게   git add MainController.java  를 한거야.
+	// 이게 Add
+	// 그리고 이제 커밋. 
 	
+	// 이제 커밋 and push OR commit  인데 커밋과 푸시를 동시에 한번에 할거냐, 커밋먼저할거냐 이차이임.
+	// 보통 커밋푸시 같이해. 방금 뭐였냐면 지금내가 계속 파일수정하고있자나 저장않하고 그거 경고창뜬거야. 다시해볼게.
+	// 여기서 저장하면 unstage에 파일생길거야
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public ModelAndView main(){
 		ModelAndView mav = new ModelAndView();
