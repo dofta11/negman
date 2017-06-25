@@ -4,5 +4,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <div id="contents">
-	메인 컨텐
+	메인 컨텐츠
 </div>
