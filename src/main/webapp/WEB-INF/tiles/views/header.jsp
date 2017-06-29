@@ -9,6 +9,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Title Setting</title>
 
+<link type="text/css" rel="stylesheet" href="<c:url value='/css/bootstrap.css'/>"/>
+<link type="text/css" rel="stylesheet" href="<c:url value='/css/bootstrap.min.css'/>"/>
+<link type="text/css" rel="stylesheet" href="<c:url value='/css/custom.css'/>"/>
 
 </head>
 <body>

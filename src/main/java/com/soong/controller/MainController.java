@@ -12,7 +12,15 @@ public class MainController {
 	public ModelAndView main(){
 		ModelAndView mav = new ModelAndView();
 		
-		mav.setViewName("main/main2");
+		mav.setViewName("main/main");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/main2", method = RequestMethod.GET)
+	public ModelAndView main2(){
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("main/index");
 		return mav;
 	}
 	
