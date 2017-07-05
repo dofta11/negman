@@ -2,37 +2,38 @@
 <!DOCTYPE mapper 
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
- 
+
 <mapper namespace="com.soong.mapper.BoardMapper">
- 
-    <insert id="boardInsert" parameterType="com.soong.vo.BoardVO">
-        INSERT INTO BOARD (title, contents, reg_id, reg_dt, hit) VALUES (
-        	#{title},
-        	#{contents},
-        	#{reg_id},
-        	now(),
-        	0
-        )
-    </insert>
-    
-    <select id="boardList" resultType="com.soong.vo.BoardVO">
-        SELECT * FROM BOARD
-    </select>
-    
-    <select id="boardView" parameterType="int" resultType="com.soong.vo.BoardVO">
-        SELECT * FROM BOARD WHERE board_srl = #{board_srl}
-    </select>
-    
-    <update id="hitPlus" parameterType="int">
-        UPDATE BOARD SET hit = hit+1 WHERE board_srl = #{board_srl}
-    </update>
-    
-    <update id="boardUpdate" parameterType="com.soong.vo.BoardVO">
-        UPDATE BOARD SET title = #{title}, contents = #{contents} WHERE board_srl = #{board_srl}
-    </update>
-    
-    <delete id="boardDelete" parameterType="int">
-        DELETE FROM BOARD WHERE board_srl = #{board_srl}
-    </delete>
+
+	<insert id="boardInsert" parameterType="com.soong.vo.BoardVO">
+		INSERT INTO BOARD (title, contents, reg_id, reg_dt, hit) VALUES (
+		#{title},
+		#{contents},
+		#{reg_id},
+		now(),
+		0
+		)
+	</insert>
+
+	<select id="boardList" parameterType="String" resultType="com.soong.vo.BoardVO">
+		SELECT * FROM BOARD WHERE board_type_cd = #{board_type_cd}
+	</select>
+
+	<select id="boardView" parameterType="int" resultType="com.soong.vo.BoardVO">
+		SELECT * FROM BOARD WHERE board_srl = #{board_srl}
+	</select>
+
+	<update id="hitPlus" parameterType="int">
+		UPDATE BOARD SET hit = hit+1 WHERE board_srl = #{board_srl}
+	</update>
+
+	<update id="boardUpdate" parameterType="com.soong.vo.BoardVO">
+		UPDATE BOARD SET title = #{title}, contents = #{contents} WHERE board_srl =
+		#{board_srl}
+	</update>
+
+	<delete id="boardDelete" parameterType="int">
+		DELETE FROM BOARD WHERE board_srl = #{board_srl}
+	</delete>
 
 </mapper>

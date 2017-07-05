@@ -20,6 +20,13 @@
 	The Header
 </div> --%>
 
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +57,7 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#">Home</a>
+                        <a href="/main">Home</a>
                     </li>
                     <li>
                         <a href="#">About</a>
@@ -81,4 +88,4 @@
         </div>
         <!-- /.container -->
     </nav>
-<div class="container-fluid">
+  <div class="container-fluid">

@@ -7,7 +7,7 @@ import com.soong.vo.BoardVO;
 public interface BoardMapper {
 	public void boardInsert(BoardVO boardVO) throws Exception;
 
-	public List<BoardVO> boardList() throws Exception;
+	public List<BoardVO> boardList(String boardList) throws Exception;
 
 	// 글보기
 	public BoardVO boardView(int board_srl) throws Exception;

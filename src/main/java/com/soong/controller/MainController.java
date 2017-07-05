@@ -16,19 +16,4 @@ public class MainController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/main2", method = RequestMethod.GET)
-	public ModelAndView main2(){
-		ModelAndView mav = new ModelAndView();
-		
-		mav.setViewName("main/index");
-		return mav;
-	}
-	
-	@RequestMapping("/member")
-	public ModelAndView helloworld(){
-		ModelAndView mav = new ModelAndView();
-		
-		mav.setViewName("main/member");
-		return mav;
-	}
 }
