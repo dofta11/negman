@@ -23,9 +23,9 @@ public class BoardController {
 
 	
 	// Notice
-	@RequestMapping(value = "/{board_type_cd}/list", method = RequestMethod.GET)
-	public ModelAndView boardList(@PathVariable("board_type_cd") String board_type_cd) throws Exception {
-		List<BoardVO> boardList = boardMapper.boardList(board_type_cd);
+	@RequestMapping(value = "/{board_cd}/list", method = RequestMethod.GET)
+	public ModelAndView boardList(@PathVariable("board_cd") String board_cd) throws Exception {
+		List<BoardVO> boardList = boardMapper.boardList(board_cd);
 		ModelAndView mav = new ModelAndView("board/boardList");
 		mav.addObject("boardList", boardList);
 		return mav;

@@ -1,19 +1,29 @@
 package com.soong.vo;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class BoardVO {
-	private int board_srl;
+	
+	private String board_cd;
+	private int board_no;
 	private String title;
-	private String Contents;
+	private String content;
+	private String like_yn;
 	private String reg_id;
-	private Date reg_dt;
-	private int hit;
-	public int getBoard_srl() {
-		return board_srl;
+	private Timestamp reg_dt;
+	private String update_id;
+	private Timestamp update_dt;
+	public String getBoard_cd() {
+		return board_cd;
 	}
-	public void setBoard_srl(int board_srl) {
-		this.board_srl = board_srl;
+	public void setBoard_cd(String board_cd) {
+		this.board_cd = board_cd;
+	}
+	public int getBoard_no() {
+		return board_no;
+	}
+	public void setBoard_no(int board_no) {
+		this.board_no = board_no;
 	}
 	public String getTitle() {
 		return title;
@@ -21,11 +31,17 @@ public class BoardVO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getContents() {
-		return Contents;
+	public String getContent() {
+		return content;
 	}
-	public void setContents(String contents) {
-		Contents = contents;
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getLike_yn() {
+		return like_yn;
+	}
+	public void setLike_yn(String like_yn) {
+		this.like_yn = like_yn;
 	}
 	public String getReg_id() {
 		return reg_id;
@@ -33,17 +49,24 @@ public class BoardVO {
 	public void setReg_id(String reg_id) {
 		this.reg_id = reg_id;
 	}
-	public Date getReg_dt() {
+	public Timestamp getReg_dt() {
 		return reg_dt;
 	}
-	public void setReg_dt(Date reg_dt) {
+	public void setReg_dt(Timestamp reg_dt) {
 		this.reg_dt = reg_dt;
 	}
-	public int getHit() {
-		return hit;
+	public String getUpdate_id() {
+		return update_id;
 	}
-	public void setHit(int hit) {
-		this.hit = hit;
+	public void setUpdate_id(String update_id) {
+		this.update_id = update_id;
 	}
+	public Timestamp getUpdate_dt() {
+		return update_dt;
+	}
+	public void setUpdate_dt(Timestamp update_dt) {
+		this.update_dt = update_dt;
+	}
+	
 	
 }

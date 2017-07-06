@@ -33,22 +33,22 @@
 							<div class="row">
 								<div class="col-xs-6">
 									<a href="#" class="thumbnail">
-										<img src="holder.js/110x80" alt="">
+										<img src="/js/holder.js/110x80" alt="">
 									</a>
 								</div>
 								<div class="col-xs-6">
 									<a href="#" class="thumbnail">
-										<img src="holder.js/110x80" alt="">
+										<img src="/js/holder.js/110x80" alt="">
 									</a>
 								</div>
 								<div class="col-xs-6">
 									<a href="#" class="thumbnail">
-										<img src="holder.js/110x80" alt="">
+										<img src="/js/holder.js/110x80" alt="">
 									</a>
 								</div>
 								<div class="col-xs-6">
 									<a href="#" class="thumbnail">
-										<img src="holder.js/110x80" alt="">
+										<img src="/js/holder.js/110x80" alt="">
 									</a>
 								</div>
 							</div>
@@ -70,16 +70,16 @@
 
 	
     <!-- jQuery -->
-    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="/js/jquery-1.11.3.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 	
 	<!-- IE10 viewport bug workaround -->
-	<script src="js/ie10-viewport-bug-workaround.js"></script>
+	<script src="/js/ie10-viewport-bug-workaround.js"></script>
 	
 	<!-- Placeholder Images -->
-	<script src="js/holder.min.js"></script>
+	<script src="/js/holder.min.js"></script>
 	
 </body>
 

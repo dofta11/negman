@@ -12,7 +12,7 @@
 			<h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> 게시판</h1>
 		</div>
 		<div class="list-group">
-			<a href="/notice" class="list-group-item">Notice</a>
+			<a href="/board/BDTY001/list" class="list-group-item">Notice</a>
 			<a href="#" class="list-group-item">Premier Niche Markets</a>
 			<a href="#" class="list-group-item">Dynamically Innovate</a>
 			<a href="#" class="list-group-item">Objectively Innovate</a>

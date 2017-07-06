@@ -17,7 +17,7 @@
 			</div>
 			<div class="">
 				<label>내용</label>
-				<textarea name="contents" class="" rows="5"></textarea>
+				<textarea name="content" class="" rows="5"></textarea>
 			</div>
 			<button type="submit" class="">작성</button>
 		</form>

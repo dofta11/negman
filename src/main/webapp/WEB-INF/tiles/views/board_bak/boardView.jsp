@@ -22,16 +22,16 @@
       </div>
       <div class="">
         <label>조회수</label>
-        <span>${board.hit}</span>
+        <span>${board.like_cnt}</span>
       </div>
       <div class="">
         <label>내용</label>
-        <p>${board.contents}</p>
+        <p>${board.content}</p>
       </div>
       <div class="">
-          <input type="button" value="수정" onclick='location.href="/board/boardWrite/${board.board_srl}"'>
+          <input type="button" value="수정" onclick='location.href="/board/boardWrite/${board.board_no}"'>
           
-          <form:form action="/board/boardWrite/${board.board_srl}" method="DELETE">
+          <form:form action="/board/boardWrite/${board.board_no}" method="DELETE">
               <input type="submit" value="삭제">
           </form:form>
           

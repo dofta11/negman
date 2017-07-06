@@ -26,7 +26,7 @@ public class NegmanApplicationTests {
 		BoardVO vo = new BoardVO();
 
 		vo.setTitle("제목입니다.");
-		vo.setContents("내용입니다.");
+		vo.setContent("내용입니다.");
 		vo.setReg_id("작성자입니다.");
 		
 		mapper.boardInsert(vo);
