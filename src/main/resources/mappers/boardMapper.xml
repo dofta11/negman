@@ -5,8 +5,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.soong.mapper.BoardMapper">
 
+	<select id="boardDetail" parameterType="java.util.Map">
+		SELECT * FROM BOARD
+		WHERE board_cd = #{board_cd} AND board_no = #{board_no}
+
+	</select>
+
 	<insert id="boardInsert" parameterType="com.soong.vo.BoardVO">
-		INSERT INTO BOARD (board_cd, board_no, title, content, like_cnt, del_yn, reg_id, reg_dt, update_id) VALUES (
+		INSERT INTO BOARD
+		(board_cd, board_no, title, content, like_cnt, del_yn, reg_id, reg_dt,
+		update_id) VALUES (
 		#{board_cd},
 		#{board_no},
 		#{title},
@@ -20,24 +28,29 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<select id="boardList" parameterType="String" resultType="com.soong.vo.BoardVO">
-		SELECT * FROM BOARD WHERE board_cd = #{board_cd}
+		SELECT
+		* FROM BOARD WHERE board_cd = #{board_cd}
 	</select>
 
 	<select id="boardView" parameterType="int" resultType="com.soong.vo.BoardVO">
-		SELECT * FROM BOARD WHERE board_no = #{board_no}
+		SELECT *
+		FROM BOARD WHERE board_no = #{board_no}
 	</select>
 
 	<update id="hitPlus" parameterType="int">
-		UPDATE BOARD SET hit = hit+1 WHERE board_no = #{board_no}
+		UPDATE BOARD SET hit = hit+1
+		WHERE board_no = #{board_no}
 	</update>
 
 	<update id="boardUpdate" parameterType="com.soong.vo.BoardVO">
-		UPDATE BOARD SET title = #{title}, content = #{content} WHERE board_no =
+		UPDATE BOARD SET title =
+		#{title}, content = #{content} WHERE board_no =
 		#{board_no}
 	</update>
 
 	<delete id="boardDelete" parameterType="int">
-		DELETE FROM BOARD WHERE board_no = #{board_no}
+		DELETE FROM BOARD WHERE
+		board_no = #{board_no}
 	</delete>
 
 </mapper>

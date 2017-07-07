@@ -1,9 +1,8 @@
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 
 <!-- Center Column -->
@@ -11,17 +10,35 @@
 
 	<!-- Alert -->
 	<div class="alert alert-success alert-dismissible" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
 		<strong>Notice:</strong> 일반회원은 조회만 가능합니다 :)
-	</div>		
+	</div>
 
 	<!-- Articles -->
 	<div class="row">
-		게시
+		<div class="boardList">
+
+			<c:forEach items="${boardList}" var="iter">
+				<div class="col-6 col-lg-4">
+					<h2>${iter.title }</h2>
+					<p>${iter.content }</p>
+					<p>
+						<a class="btn btn-secondary" href="/board/${board_cd}/detail?board_no=${iter.board_no}" role="button">View details »</a>
+					</p>
+				</div>
+			</c:forEach>
+
+		</div>
 	</div>
 	<hr>
-</div><!--/Center Column-->
+</div>
+<!--/Center Column-->
 
+<script type="text/javascript">
+	$(document).ready(function() {
 
-	  
+	});
+</script>
 
