@@ -98,3 +98,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 ########## -- Maven.gitignore End
+
+
+######## Logback : .log
+*.log
