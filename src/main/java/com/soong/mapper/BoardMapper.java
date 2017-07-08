@@ -1,7 +1,8 @@
 package com.soong.mapper;
 
 import java.util.List;
-import java.util.Map;
+
+import org.apache.ibatis.annotations.Param;
 
 import com.soong.vo.BoardVO;
 
@@ -10,7 +11,7 @@ public interface BoardMapper {
 
 	public List<BoardVO> boardList(String board_cd) throws Exception;
 	
-	public List<BoardVO> boardDetail(Map map) throws Exception;
+	public BoardVO boardDetail(@Param("board_cd") String board_cd, @Param("board_no") int board_no) throws Exception;
 
 	// 글보기
 	public BoardVO boardView(int board_no) throws Exception;

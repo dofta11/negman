@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.soong.mapper.BoardMapper">
 
-	<select id="boardDetail" parameterType="java.util.Map">
+	<select id="boardDetail" parameterType="map" resultType="com.soong.vo.BoardVO">
 		SELECT * FROM BOARD
 		WHERE board_cd = #{board_cd} AND board_no = #{board_no}
 

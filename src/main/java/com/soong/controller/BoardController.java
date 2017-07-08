@@ -1,9 +1,9 @@
 package com.soong.controller;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +18,8 @@ import com.soong.vo.BoardVO;
 @Controller
 @RequestMapping("/board")
 public class BoardController {
+	
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private BoardMapper boardMapper;
@@ -28,7 +30,6 @@ public class BoardController {
 		List<BoardVO> boardList = boardMapper.boardList(board_cd);
 		ModelAndView mav = new ModelAndView("board/boardList");
 
-		System.out.println(boardList);
 		mav.addObject("boardList", boardList);
 		mav.addObject("board_cd", board_cd);
 		return mav;
@@ -38,12 +39,7 @@ public class BoardController {
 	public ModelAndView boardDetail(@RequestParam("board_no") int board_no, @PathVariable("board_cd") String board_cd) throws Exception {
 		ModelAndView mav = new ModelAndView("board/boardDetail");
 		
-		Map<String, Comparable> map = new HashMap<String, Comparable>();
-		map.put( "board_cd", board_cd );
-		map.put( "board_no", board_no );
-System.out.println(map);		
-		List<BoardVO> boardDetail = boardMapper.boardDetail(map);
-		System.out.println(boardDetail);
+		BoardVO boardDetail = boardMapper.boardDetail(board_cd, board_no);
 	
 		mav.addObject("boardDetail", boardDetail);
 		
