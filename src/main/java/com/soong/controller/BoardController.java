@@ -35,6 +35,17 @@ public class BoardController {
 		return mav;
 	}
 
+	@RequestMapping(value = "/{board_cd}/boardPostForm", method = RequestMethod.GET)
+	public ModelAndView boardPostForm(@PathVariable("board_cd") String board_cd) throws Exception {
+		ModelAndView mav = new ModelAndView("board/boardPostForm");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/{board_cd}/boardPost", method = RequestMethod.POST)
+	public String boardPost(@PathVariable("board_cd") String board_cd) throws Exception {
+		return "Success";
+	}
+	
 	@RequestMapping(value = "/{board_cd}/detail", method = RequestMethod.GET)
 	public ModelAndView boardDetail(@RequestParam("board_no") int board_no, @PathVariable("board_cd") String board_cd) throws Exception {
 		ModelAndView mav = new ModelAndView("board/boardDetail");

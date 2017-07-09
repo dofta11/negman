@@ -5,6 +5,12 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 
+<style>
+.boardWriteBtn{
+	
+}
+</style>
+
 <!-- Center Column -->
 <div class="col-sm-6">
 
@@ -18,6 +24,9 @@
 
 	<!-- Articles -->
 	<div class="row">
+		<div class="boardWriteBtn pull-right">
+			<button type="button" id="boardPostBtn" class="btn btn-default">글쓰기</button>
+		</div>
 		<div class="boardList">
 
 			<c:forEach items="${boardList}" var="iter">
@@ -31,6 +40,7 @@
 			</c:forEach>
 
 		</div>
+
 	</div>
 	<hr>
 </div>
@@ -38,7 +48,9 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-
+		$("#boardPostBtn").click(function(){
+			location.href = "/board/${board_cd}/boardPostForm";
+		});
 	});
 </script>
 
