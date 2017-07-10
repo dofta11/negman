@@ -11,6 +11,10 @@
 	<div class="row">
 		<div class="boardPostForm">
 			<form class="form-horizontal" id="boardPostForm" method="POST" action="">
+			
+				<input type="hidden" name="board_cd" value="${board_cd}"/>
+				<input type="hidden" name="reg_id" value="soong0608"/>
+			
 				<div class="form-group">
 					<label class="col-xs-3 control-label">Title</label>
 					<div class="col-xs-8">
@@ -18,11 +22,12 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="pwd" class="col-xs-3 control-label">Password</label>
+					<label for="pwd" class="col-xs-3 control-label">Content</label>
 					<div class="col-xs-8">
 						<textarea class="form-control" id="content" name="content"></textarea>
 					</div>
 				</div>
+				
 				<div>
 					<div class="col-xs-8">
 						<Button type="button" id="postBtn">등록</Button>

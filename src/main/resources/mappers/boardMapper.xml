@@ -6,25 +6,36 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.soong.mapper.BoardMapper">
 
 	<select id="boardDetail" parameterType="map" resultType="com.soong.vo.BoardVO">
-		SELECT * FROM BOARD
+		SELECT *
+		FROM BOARD
 		WHERE board_cd = #{board_cd} AND board_no = #{board_no}
 
 	</select>
 
 	<insert id="boardInsert" parameterType="com.soong.vo.BoardVO">
+
+		<selectKey resultType="int" keyProperty="board_no" order="BEFORE">
+			SELECT MAX(board_no) + 1 FROM BOARD WHERE board_cd = #{board_cd}
+		</selectKey>
+
 		INSERT INTO BOARD
-		(board_cd, board_no, title, content, like_cnt, del_yn, reg_id, reg_dt,
-		update_id) VALUES (
+		(board_cd, board_no, title, content, like_cnt,
+		del_yn, reg_id, reg_dt)
+		VALUES (
 		#{board_cd},
 		#{board_no},
 		#{title},
 		#{content},
-		#{like_cnt},
+		0,
 		'N',
 		#{reg_id},
-		now(),
-		#{update_id}
+		now()
 		)
+
+		<!-- <selectKey resultType="int" keyProperty="board_no" order="AFTER">
+			SELECT MAX(board_no) FROM BOARD WHERE board_cd = #{board_cd}
+		</selectKey> -->
+		
 	</insert>
 
 	<select id="boardList" parameterType="String" resultType="com.soong.vo.BoardVO">

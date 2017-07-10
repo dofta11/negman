@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -38,12 +39,20 @@ public class BoardController {
 	@RequestMapping(value = "/{board_cd}/boardPostForm", method = RequestMethod.GET)
 	public ModelAndView boardPostForm(@PathVariable("board_cd") String board_cd) throws Exception {
 		ModelAndView mav = new ModelAndView("board/boardPostForm");
+		mav.addObject("board_cd", board_cd);
 		return mav;
 	}
 	
 	@RequestMapping(value = "/{board_cd}/boardPost", method = RequestMethod.POST)
-	public String boardPost(@PathVariable("board_cd") String board_cd) throws Exception {
-		return "Success";
+	public String boardPost(@PathVariable("board_cd") String board_cd, @ModelAttribute("BoardVO") BoardVO boardVO) throws Exception {
+		
+		
+		System.out.println(boardVO.getBoard_cd());
+		boardMapper.boardInsert(boardVO);
+		
+		System.out.println('t');
+		
+		return "redirect:/board/"+board_cd+"/list";
 	}
 	
 	@RequestMapping(value = "/{board_cd}/detail", method = RequestMethod.GET)

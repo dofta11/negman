@@ -8,7 +8,7 @@ public class BoardVO {
 	private int board_no;
 	private String title;
 	private String content;
-	private String like_yn;
+	private String like_cnt;
 	private String reg_id;
 	private Timestamp reg_dt;
 	private String update_id;
@@ -37,11 +37,11 @@ public class BoardVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getLike_yn() {
-		return like_yn;
+	public String getLike_cnt() {
+		return like_cnt;
 	}
-	public void setLike_yn(String like_yn) {
-		this.like_yn = like_yn;
+	public void setLike_cnt(String like_yn) {
+		this.like_cnt = like_yn;
 	}
 	public String getReg_id() {
 		return reg_id;
