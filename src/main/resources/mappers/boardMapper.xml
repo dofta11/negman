@@ -40,7 +40,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="boardList" parameterType="String" resultType="com.soong.vo.BoardVO">
 		SELECT
-		* FROM BOARD WHERE board_cd = #{board_cd}
+			T1.*
+		FROM BOARD T1
+			INNER JOIN CODE_BOARD T2 ON T1.board_cd = T2.board_cd
+		WHERE T1.board_cd = #{board_cd}
 	</select>
 
 	<select id="boardView" parameterType="int" resultType="com.soong.vo.BoardVO">
