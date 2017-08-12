@@ -8,7 +8,7 @@
 
 </div>
 	<footer>
-		<div class="footer-blurb">
+		<%--<div class="footer-blurb">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-3 footer-blurb-item">
@@ -58,7 +58,7 @@
 				</div>
 				<!-- /.row -->	
 			</div>
-        </div>
+        </div>--%>
         
         <div class="small-print">
         	<div class="container">

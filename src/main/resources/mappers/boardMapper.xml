@@ -44,6 +44,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		FROM BOARD T1
 			INNER JOIN CODE_BOARD T2 ON T1.board_cd = T2.board_cd
 		WHERE T1.board_cd = #{board_cd}
+
+		ORDER BY T1.reg_dt DESC
 	</select>
 
 	<select id="boardView" parameterType="int" resultType="com.soong.vo.BoardVO">

@@ -27,14 +27,15 @@
 		<div class="boardWriteBtn pull-right">
 			<button type="button" id="boardPostBtn" class="btn btn-default">글쓰기</button>
 		</div>
+
 		<div class="boardList">
 
 			<c:forEach items="${boardList}" var="iter">
-				<div class="col-6 col-lg-4">
+				<div class="">
 					<h2>${iter.title }</h2>
 					<p>${iter.content }</p>
 					<p>
-						<a class="btn btn-secondary" href="/board/${board_cd}/detail?board_no=${iter.board_no}" role="button">View details »</a>
+						<a class="btn btn-secondary" href="/board/${board_cd}/detail?board_no=${iter.board_no}" role="button">more »</a>
 					</p>
 				</div>
 			</c:forEach>

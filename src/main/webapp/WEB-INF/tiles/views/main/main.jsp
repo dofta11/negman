@@ -12,11 +12,14 @@
 	<!-- Alert -->
 	<div class="alert alert-success alert-dismissible" role="alert">
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<strong>Synergize:</strong> Seamlessly visualize quality intellectual capital!
+		<strong>Welcome</strong> Negman!
 	</div>		
 
-	<!-- Articles -->
 	<div class="row">
+		Main
+	</div>
+	<!-- Articles -->
+	<%--<div class="row">
 		<article class="col-xs-12">
 			<h2>Premier Niche Markets</h2>
 			<p>Phosfluorescently engage worldwide methodologies with web-enabled technology. Interactively coordinate proactive e-commerce via process-centric "outside the box" thinking. Completely pursue scalable customer service through sustainable potentialities.</p>
@@ -43,7 +46,7 @@
 			</ul>
 		</article>
 	</div>
-	<hr>      
+	<hr>
 	<div class="row">
 		<article class="col-xs-12">
 			<h2>Completely Synergize</h2>
@@ -56,7 +59,7 @@
 				<li><a href="#"><span class="glyphicon glyphicon-share"></span> 18 Shares</a></li>
 			</ul>
 		</article>
-	</div>
+	</div>--%>
 	<hr>
 </div><!--/Center Column-->
 

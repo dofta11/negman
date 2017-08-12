@@ -24,13 +24,14 @@
 				<div class="form-group">
 					<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
 				</div>
-				<button type="submit" class="btn btn-default">Log In</button>
+				<button type="submit" class="btn btn-default">Sign In</button>
+				<button type="button" id="signUpBtn" class="btn btn-primary">Sign Up</button>
 			</form>
 		</div>
 	</div>
 
 	<!-- Progress Bars -->
-	<div class="panel panel-default">
+	<%--<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">
 				<span class="glyphicon glyphicon-scale"></span> 
@@ -63,7 +64,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>--%>
 
 	<!-- Carousel --> 
 		<h3><span class="glyphicon glyphicon-modal-window"></span> Synergization</h3>
@@ -113,3 +114,11 @@
 	  </div>
 
  </div><!--/Right Column -->
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	   $("#signUpBtn").on("click", function(){
+	      location.href = "/member/join_form";
+	   });
+	});
+</script>
