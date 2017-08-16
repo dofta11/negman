@@ -13,9 +13,21 @@
     <title>Portal 1</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
-    
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    
+    <!-- jQuery -->
+    <script src="/js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport bug workaround -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Placeholder Images -->
+    <script src="/js/holder.min.js"></script>
+
+    <!-- web jar -->
+    <script src="/webjars/jquery-validation/1.14.0/jquery.validate.min.js"></script>
+
 </head>
 
 <body> 

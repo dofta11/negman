@@ -27,8 +27,8 @@
 						<p><a class="btn btn-default" href="#">Complete</a></p>
 					</div>
 					<div class="col-sm-3 footer-blurb-item">
-						
-						<!-- Thumbnails --> 
+
+						<!-- Thumbnails -->
 						<h3><span class="glyphicon glyphicon-camera"></span> Phosfluorescent</h3>
 							<div class="row">
 								<div class="col-xs-6">
@@ -52,14 +52,14 @@
 									</a>
 								</div>
 							</div>
-							
+
 					</div>
 
 				</div>
-				<!-- /.row -->	
+				<!-- /.row -->
 			</div>
         </div>--%>
-        
+
         <div class="small-print">
         	<div class="container">
         		<p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
@@ -68,19 +68,7 @@
         </div>
 	</footer>
 
-	
-    <!-- jQuery -->
-    <script src="/js/jquery-1.11.3.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js/bootstrap.min.js"></script>
-	
-	<!-- IE10 viewport bug workaround -->
-	<script src="/js/ie10-viewport-bug-workaround.js"></script>
-	
-	<!-- Placeholder Images -->
-	<script src="/js/holder.min.js"></script>
-	
 </body>
 
 </html>
