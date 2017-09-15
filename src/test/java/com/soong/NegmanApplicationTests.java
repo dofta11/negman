@@ -16,31 +16,31 @@ import com.soong.vo.BoardVO;
 @SpringBootTest
 public class NegmanApplicationTests {
 
-	@Autowired
-	private BoardMapper mapper;
-	
-
-	
-	@Test
-	public void testMapper() throws Exception{
-		BoardVO vo = new BoardVO();
-
-		vo.setTitle("제목입니다.");
-		vo.setContent("내용입니다.");
-		vo.setReg_id("작성자입니다.");
-		
-		mapper.boardInsert(vo);
-
-	}
-	
-	@Bean
-	public void testTilesConfigurer() {
-		TilesConfigurer configurer = new TilesConfigurer();
-		configurer.setDefinitions(new String[] { "file:src/main/webapp/WEB-INF/tiles/tiles.xml" });
-		configurer.setCheckRefresh(true);
-		
-		System.out.println(configurer);
-	}
+//	@Autowired
+//	private BoardMapper mapper;
+//
+//
+//
+//	@Test
+//	public void testMapper() throws Exception{
+//		BoardVO vo = new BoardVO();
+//
+//		vo.setTitle("제목입니다.");
+//		vo.setContent("내용입니다.");
+//		vo.setReg_id("작성자입니다.");
+//
+//		mapper.boardInsert(vo);
+//
+//	}
+//
+//	@Bean
+//	public void testTilesConfigurer() {
+//		TilesConfigurer configurer = new TilesConfigurer();
+//		configurer.setDefinitions(new String[] { "file:src/main/webapp/WEB-INF/tiles/tiles.xml" });
+//		configurer.setCheckRefresh(true);
+//
+//		System.out.println(configurer);
+//	}
 	
 //	@Autowired
 //	private DataSource ds; // 작성
