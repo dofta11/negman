@@ -4,14 +4,13 @@
            "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-	<!-- Exception -->
-	<definition name="angular.basic" template="/WEB-INF/tiles/layout/angular_basic.jsp">
-		<put-attribute name="title" value="Angular" />
-		<put-attribute name="angularContents" value="" />
+	<!-- empty -->
+	<definition name="layout.empty" template="/WEB-INF/tiles/layout/empty.jsp">
+		<put-attribute name="body" value="" />
 	</definition>
 
-	<definition name="angular/*" extends="angular.basic">
-		<put-attribute name="angularContents" value="/WEB-INF/tiles/views/angular/{1}.jsp"></put-attribute>
+	<definition name="*/*/*.tpl" extends="layout.empty">
+		<put-attribute name="body" value="/WEB-INF/tiles/views/{1}/{2}/{3}.tpl.jsp" />
 	</definition>
 
 
@@ -26,7 +25,6 @@
 		<put-attribute name="footer" value="/WEB-INF/tiles/views/footer.jsp" />
 	</definition>
 
-	<!-- Pages -->
 	<definition name="*/*" extends="layout.basic">
 		<put-attribute name="body" value="/WEB-INF/tiles/views/{1}/{2}.jsp" />
 	</definition>
@@ -34,10 +32,6 @@
 	<definition name="*/*/*" extends="layout.basic">
 		<put-attribute name="body" value="/WEB-INF/tiles/views/{1}/{2}/{3}.jsp" />
 	</definition>
-
-
-
-
 
 
 </tiles-definitions>

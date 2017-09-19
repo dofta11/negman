@@ -15,7 +15,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="boardInsert" parameterType="com.soong.vo.BoardVO">
 
 		<selectKey resultType="int" keyProperty="board_no" order="BEFORE">
-			SELECT MAX(board_no) + 1 FROM BOARD WHERE board_cd = #{board_cd}
+			SELECT IFNULL(MAX(board_no),0) + 1 FROM BOARD WHERE board_cd = #{board_cd}
 		</selectKey>
 
 		INSERT INTO BOARD

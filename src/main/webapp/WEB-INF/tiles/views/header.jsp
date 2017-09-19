@@ -13,6 +13,8 @@
     <title>Portal 1</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="/angular/css/style.css" />
+
     <!-- jQuery -->
     <script src="/js/jquery-1.11.3.min.js"></script>
 
@@ -27,6 +29,17 @@
 
     <!-- web jar -->
     <script src="/webjars/jquery-validation/1.14.0/jquery.validate.min.js"></script>
+
+    <%--<link data-require="bootstrap@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />--%>
+    <%--<script data-require="bootstrap@3.3.6" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>--%>
+
+    <!-- Angular -->
+    <script data-require="angularjs@1.5.7" data-semver="1.5.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script data-require="angularjs@1.5.7" data-semver="1.5.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-mocks.js"></script>
+    <script data-require="angularjs@1.5.7" data-semver="1.5.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
+    <script data-require="angularjs@1.5.7" data-semver="1.5.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+
+
 
 </head>
 
@@ -43,7 +56,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-globe"></span> Logo</a>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-globe"></span> SOONGTORY</a>
             </div>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
@@ -51,29 +64,42 @@
                     <li class="active">
                         <a href="/main">Home</a>
                     </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LAB <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="/board/BDTY001/list">Basic Board</a></li>
+                            <li><a href="/angular/BDTY002/list">Angular Board</a></li>
+                            <li><a href="#">React Board</a></li>
+                            <li><a href="#">Couchbase</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Angular Study<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="/angular/todo/list">Angular Todo List</a></li>
+                        </ul>
+                    </li>
+
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">FAVORITE</a>
+                    </li>
+
+                    <li>
+                        <a href="#" >Contact</a>
                     </li>
                     <li>
-                        <a href="#">Products</a>
+                        <a href="#" >Access Log</a>
                     </li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
-						<ul class="dropdown-menu" aria-labelledby="about-us">
-							<li><a href="#">Engage</a></li>
-							<li><a href="#">Pontificate</a></li>
-							<li><a href="#">Synergize</a></li>
-						</ul>
-					</li>    
                 </ul>
 
 				<!-- Search -->
-				<form class="navbar-form navbar-right" role="search">
+				<%--<form class="navbar-form navbar-right" role="search">
 					<div class="form-group">
 						<input type="text" class="form-control">
 					</div>
 					<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
-				</form>
+				</form>--%>
 
             </div>
             <!-- /.navbar-collapse -->

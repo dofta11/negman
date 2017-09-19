@@ -5,20 +5,20 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<div class="col-sm-3">
+<div class="col-sm-2">
 	<!-- List-Group Panel -->
-	<div class="panel panel-default">
+	<%--<div class="panel panel-default">
 		<div class="panel-heading">
 			<h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> 게시판</h1>
 		</div>
 		<div class="list-group">
 			<a href="/board/BDTY001/list" class="list-group-item">Notice</a>
-			<%--<a href="#" class="list-group-item">Premier Niche Markets</a>
+			&lt;%&ndash;<a href="#" class="list-group-item">Premier Niche Markets</a>
 			<a href="#" class="list-group-item">Dynamically Innovate</a>
 			<a href="#" class="list-group-item">Objectively Innovate</a>
-			<a href="#" class="list-group-item">Proactively Envisioned</a>--%>
+			<a href="#" class="list-group-item">Proactively Envisioned</a>&ndash;%&gt;
 		</div>
-	</div>
+	</div>--%>
 
 	<!-- Text Panel -->
 	<%--<div class="panel panel-default">

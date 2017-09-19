@@ -9,7 +9,7 @@
  <div class="col-sm-3">
 
 	<!-- Form --> 
-	<div class="panel panel-default">
+	<%--<div class="panel panel-default">
 		<div class="panel-heading">
 			<h3 class="panel-title">
 				<span class="glyphicon glyphicon-log-in"></span> 
@@ -28,7 +28,7 @@
 				<button type="button" id="signUpBtn" class="btn btn-primary">Sign Up</button>
 			</form>
 		</div>
-	</div>
+	</div>--%>
 
 	<!-- Progress Bars -->
 	<%--<div class="panel panel-default">
@@ -80,7 +80,7 @@
 					<img class="img-responsive" src="holder.js/400x300?bg=FF8C00&text=Image%201" alt="">
 				</a>
 				<div class="carousel-caption">
-					<h3>Dramatically Engage</h3>
+					<h3></h3>
 					<p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
 				</div>
 			</div>
@@ -89,7 +89,7 @@
 					<img class="img-responsive" src="holder.js/400x300?bg=FF8C00&text=Image%202" alt="">
 				</a>
 				<div class="carousel-caption">
-					<h3>Efficiently Unleash</h3>
+					<h3></h3>
 					<p>Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
 				</div>
 			</div>
@@ -98,7 +98,7 @@
 					<img class="img-responsive" src="holder.js/400x300?bg=FF8C00&text=Image%203" alt="">
 				</a>
 				<div class="carousel-caption">
-					<h3>Proactively Pontificate</h3>
+					<h3></h3>
 					<p>Holistically pontificate installed base portals after maintainable products.</p>
 				</div>
 			</div>			  

@@ -7,7 +7,7 @@
 
 
 <!-- Center Column -->
-<div class="col-sm-6">
+<div class="col-sm-7">
 
 	<!-- Alert -->
 	<div class="alert alert-success alert-dismissible" role="alert">
