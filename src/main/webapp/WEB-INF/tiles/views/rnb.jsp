@@ -113,12 +113,12 @@
 			</a>
 	  </div>
 
-	 <div ng-controller="RnbCtrl">
-		 {{ boardList | json }}
+	 <%--<div ng-controller="RnbCtrl">
+		 &lt;%&ndash;{{ boardList | json }}&ndash;%&gt;
 		 <ul ng-repeat="board in boardList">
 			 <li>{{board.title}}</li>
 		 </ul>
-	 </div>
+	 </div>--%>
 
  </div><!--/Right Column -->
 <script>
@@ -140,13 +140,11 @@
 	//Body를 제외하고는 모두 tiles xml설정으로 뷰를 렌더링하기때문에...
 
 	//Module init
-	var app = angular.module("RnbApp", []);
-	console.log(app);
+	/*var app = angular.module("RnbApp", []);
 	//Controller
 	app.controller("RnbCtrl", function($scope, $http){
 		$http.get("/angular/board/BDTY001/list").then(function(response){
-			console.log(response);
 			$scope.boardList = response.data;
 		});
-	});
+	});*/
 </script>

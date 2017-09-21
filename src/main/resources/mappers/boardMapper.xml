@@ -38,6 +38,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		
 	</insert>
 
+    <select id="allBoardList" parameterType="String" resultType="com.soong.vo.BoardVO">
+        SELECT
+        T1.*
+        FROM BOARD T1
+        INNER JOIN CODE_BOARD T2 ON T1.board_cd = T2.board_cd
+        ORDER BY T1.reg_dt DESC
+    </select>
+
 	<select id="boardList" parameterType="String" resultType="com.soong.vo.BoardVO">
 		SELECT
 			T1.*

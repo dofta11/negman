@@ -56,10 +56,10 @@ public class AngularController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/board/{board_cd}/list", method = RequestMethod.GET)
-    public List<BoardVO> angularBoardList(@PathVariable("board_cd") String board_cd) throws Exception {
+    @RequestMapping(value = "/board/list", method = RequestMethod.GET)
+    public List<BoardVO> angularBoardList() throws Exception {
 
-        List<BoardVO> boardList = boardMapper.boardList(board_cd);
+        List<BoardVO> boardList = boardMapper.allBoardList();
         System.out.println("boardList" + boardList);
         return boardList;
     }

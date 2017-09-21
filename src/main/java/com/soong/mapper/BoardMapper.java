@@ -10,7 +10,8 @@ public interface BoardMapper {
 	public void boardInsert(BoardVO boardVO) throws Exception;
 
 	public List<BoardVO> boardList(String board_cd) throws Exception;
-	
+	public List<BoardVO> allBoardList() throws Exception;
+
 	public BoardVO boardDetail(@Param("board_cd") String board_cd, @Param("board_no") int board_no) throws Exception;
 
 	// 글보기
