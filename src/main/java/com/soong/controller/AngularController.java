@@ -3,10 +3,7 @@ package com.soong.controller;
 import com.soong.mapper.BoardMapper;
 import com.soong.vo.BoardVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -56,6 +53,15 @@ public class AngularController {
         ModelAndView mav = new ModelAndView("angular/todo/list");
         System.out.println("Test");
         return mav;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/board/{board_cd}/list", method = RequestMethod.GET)
+    public List<BoardVO> angularBoardList(@PathVariable("board_cd") String board_cd) throws Exception {
+
+        List<BoardVO> boardList = boardMapper.boardList(board_cd);
+        System.out.println("boardList" + boardList);
+        return boardList;
     }
 
 }
